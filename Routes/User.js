@@ -14,10 +14,6 @@ router.get('/users',userController.users)
 // get user profile
 router.get("/profile", Auth.Authenticated, userController.profile);
 
-router.post("/webhook",(req,res)=>{
-  res.status(200).json({
-    status:"success",
-    data:req.body
-  });
+
 
 module.exports=router;
